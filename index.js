@@ -4,8 +4,8 @@ let dragButton = document.getElementById('drag');
 let output = document.getElementById('output');
 let deleteButton = document.getElementById('delete');
 
-c.width = window.innerWidth - 200;
-c.height = window.innerHeight - 200;
+c.width = window.innerWidth - 50;
+c.height = window.innerHeight - 120;
 let ctx = c.getContext('2d');
 let draw = false;
 let mouseX = 0;
@@ -38,7 +38,6 @@ dragButton.addEventListener('click', (e) => {
 
 deleteButton.addEventListener('click', (e) => {
   ctx.clearRect(0, 0, c.width, c.height);
-  ctx.fillRect(0, 0, c.width, c.height);
   isDraggable = false;
   isDrawable = false;
 });
